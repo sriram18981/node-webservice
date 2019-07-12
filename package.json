@@ -1,0 +1,21 @@
+{
+  "name": "webservice",
+  "version": "1.0.0",
+  "description": "A simple webservice with exposing sample API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "webservice",
+    "api"
+  ],
+  "author": "Sriram",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
