@@ -1,5 +1,11 @@
 const redis = require('redis');
-const redisClient = redis.createClient();
+
+
+var redis_options = {};
+redis_options.host =  (process.env.REDIS_PORT_6379_TCP_ADDR) ? process.env.REDIS_PORT_6379_TCP_ADDR : null;
+redis_options.port = (process.env.REDIS_PORT_6379_TCP_PORT) ? process.env.REDIS_PORT_6379_TCP_PORT : '6379';
+
+const redisClient = redis.createClient(redis_options);
 
 redisClient.on('connect', function () { 
     console.log('Redis client connected.'); 

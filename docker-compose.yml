@@ -1,5 +1,14 @@
 version: '3'
 services:
+  node-server:
+    build: .
+    container_name: node-server
+    ports: 
+      - "8888:8888"
+    environment: 
+      - REDIS_PORT_6379_TCP_ADDR=redis
+      - REDIS_PORT_6379_TCP_PORT=6379
+
   redis:
     container_name: redis
     hostname: redis
